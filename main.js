@@ -1,4 +1,5 @@
 const taskInput = document.querySelector('.task-input input');
+const addBtn = document.querySelector('.add');
 const taskBox = document.querySelector('.task-box');
 const deleteTasks = document.querySelector('.delete');
 // const filters = document.querySelectorAll('.filters span');
@@ -64,9 +65,9 @@ function deleteTask(deleteId){
 }
 
 
-taskInput.addEventListener('keyup', e => {
+addBtn.addEventListener('click', e => {
     let userTask = taskInput.value.trim();
-    if (e.key === 'Enter' && userTask){
+    if (userTask){
         if(!todos) { //if todos is not exist, pass an empty array to todos 
             todos = [];
         }
